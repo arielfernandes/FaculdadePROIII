@@ -2,7 +2,8 @@
 #define ALUNOS_H
 #include "DadosUsuario.h"
 
-class Alunos
+//Extends DadosUsuario
+class Alunos:public DadosUsuario
 {
 
 public:
@@ -13,6 +14,10 @@ public:
 
     int getMatricula();
     string getCurso();
+
+    void cadastrarDados();
+    void imprimirDados();
+
 protected:
 private:
     string curso;

@@ -3,20 +3,20 @@
 #include <string.h>
 #include <iostream>
 using namespace std;
-
+//Classe base
 class DadosUsuario
 {
 
 public:
     DadosUsuario();
     virtual ~DadosUsuario();
-    void imprimirDados(int op);
-    void cadastradarDados(int op);
+    void imprimirDados();
+    void cadastradarDados();
+
     void setNome(string nome);
     void setAno(int ano);
     void setCpf(int cpf);
     void setDataNasc(int data);
-    void setCodigo(int codigo);
 
     string getNome();
     int getAno();

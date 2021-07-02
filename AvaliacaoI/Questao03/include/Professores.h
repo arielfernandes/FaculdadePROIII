@@ -1,17 +1,20 @@
 #ifndef PROFESSORES_H
 #define PROFESSORES_H
 #include "DadosUsuario.h"
-
-class Professores {
+//Extends DadosUsuario
+class Professores : public DadosUsuario
+{
 
 public:
     Professores();
     virtual ~Professores();
     void setAnoContratacao(int ano);
     int getAnoContratacao();
-  
-    protected:
-    private:
+    void cadastrarDados();
+    void imprimirDados();
+
+protected:
+private:
     int anoDeContratacao;
 };
 #endif

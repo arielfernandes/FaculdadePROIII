@@ -14,11 +14,8 @@ void SistemaAcademico::menuPrincipal()
     while (opcao != 0)
     {
         cout << "*** Menu Principal ***" << endl;
-        cout << "1 - Cadastrar Aluno" << endl;
-        cout << "2 - Cadastrar Professor" << endl;
-        cout << "3 - Listar Professores" << endl;
-        cout << "4 - Listar Alunos" << endl;
-        cout << "5 - Excluir" << endl;
+        cout << "1 - Menu Alunos" << endl;
+        cout << "2 - Menu Professores" << endl;
         cout << "0 - sair" << endl;
         cout << "Informe a opção desejada: " << endl;
         cin >> opcao;
@@ -26,41 +23,65 @@ void SistemaAcademico::menuPrincipal()
         switch (opcao)
         {
         case 1:
+            menuAlunos();
+            break;
         case 2:
-            incluirUsuario(opcao);
-            break;
-        case 3:
-        case 4:
-            listarUsuario(opcao);
-            break;
-        case 5:
-            excluirUsuario();
+            menuProfessores();
             break;
         }
     }
+    cout << "Programa encerrado" << endl;
 }
-void SistemaAcademico::incluirUsuario(int op)
+
+void SistemaAcademico::menuAlunos()
 {
-    DadosUsuario *novoCadastro = new DadosUsuario;
-    novoCadastro->cadastradarDados(op);
-    dados.push_back(novoCadastro);
-}
-void SistemaAcademico::excluirUsuario()
-{
-    int aux;
-    cout << "Cadastrados: " << endl;
-    cout << "1 - Professor | Aluno - 2" << endl;
-    cin >> aux;
-    listarUsuario(aux);
-    cout << "Informe a posição a excluir: " << endl;
-    cin >> aux;
-    dados.erase(dados.begin() + aux); 
-}
-void SistemaAcademico::listarUsuario(int op)
-{
-    for (size_t i = 0; i < dados.size(); i++)
+
+    int opcao = -1;
+    while (opcao != 0)
     {
-        cout << "Posição: " << i << endl;
-        dados[i]->imprimirDados(op);
+        cout << "*** Menu Alunos ***" << endl;
+        cout << "1 - Cadastrar" << endl;
+        cout << "2 - Listar" << endl;
+        cout << "3 - Excluir" << endl;
+        cout << "0 - sair" << endl;
+        cout << "Informe a opção desejada: " << endl;
+        cin >> opcao;
+
+        switch (opcao)
+        {
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        }
     }
+    cout << "Programa encerrado" << endl;
+}
+void SistemaAcademico::menuProfessores()
+{
+
+    int opcao = -1;
+    while (opcao != 0)
+    {
+        cout << "*** Menu Professores ***" << endl;
+        cout << "1 - Cadastrar" << endl;
+        cout << "2 - Listar" << endl;
+        cout << "3 - Excluir" << endl;
+        cout << "0 - sair" << endl;
+        cout << "Informe a opção desejada: " << endl;
+        cin >> opcao;
+
+        switch (opcao)
+        {
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        }
+    }
+    cout << "Programa encerrado" << endl;
 }
