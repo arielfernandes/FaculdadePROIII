@@ -49,15 +49,38 @@ void SistemaAcademico::menuAlunos()
 
         switch (opcao)
         {
-        case 1:
+        case 1: cadastrarAlunos();
             break;
-        case 2:
+        case 2: listarAlunos();
             break;
-        case 3:
+        case 3: excluirAlunos();
             break;
         }
     }
-    cout << "Programa encerrado" << endl;
+}
+void SistemaAcademico::cadastrarAlunos()
+{
+    Alunos *novoAluno = new Alunos();
+    novoAluno->cadastrarDados();
+    alunos.push_back(novoAluno);
+}
+void SistemaAcademico::listarAlunos()
+{
+    for (size_t i = 0; i < alunos.size(); i++)
+    {
+        cout << "Posição: " << i << endl;
+        alunos[i]->imprimirDados();
+    }
+    
+}
+void SistemaAcademico::excluirAlunos()
+{
+    cout << "Relação de Alunos: " << endl;
+    listarAlunos();
+    int posicao;
+    cout << "Informe a posicao a excluir: " << endl;
+    cin >> posicao;
+    alunos.erase(alunos.begin() + posicao);
 }
 void SistemaAcademico::menuProfessores()
 {
@@ -75,13 +98,38 @@ void SistemaAcademico::menuProfessores()
 
         switch (opcao)
         {
-        case 1:
+        case 1: cadastrarProfessores();
             break;
-        case 2:
+        case 2: listarProfessores();
             break;
-        case 3:
+        case 3: excluirProfessores();
             break;
         }
     }
-    cout << "Programa encerrado" << endl;
+}
+
+void SistemaAcademico::cadastrarProfessores()
+{
+    Professores *novoProfessor = new Professores();
+    novoProfessor->cadastrarDados();
+    professores.push_back(novoProfessor);
+}
+
+void SistemaAcademico::listarProfessores()
+{
+     for (size_t i = 0; i < professores.size(); i++)
+    {
+        cout << "Posição: " << i << endl;
+        professores[i]->imprimirDados();
+    }
+    
+}
+void SistemaAcademico::excluirProfessores()
+{
+    cout << "Relação de Professores: " << endl;
+    listarProfessores();
+    int posicao;
+    cout << "Informe a posicao a excluir: " << endl;
+    cin >> posicao;
+    professores.erase(professores.begin() + posicao);
 }

@@ -63,11 +63,3 @@ int DadosUsuario::getData()
 {
     return dataNasc;
 }
-void DadosUsuario::setCodigo(int codigo)
-{
-    this->codigo = codigo;
-}
-int DadosUsuario::getCodigo()
-{
-    return codigo;
-}
