@@ -22,7 +22,6 @@ public:
     int getAno();
     int getCpf();
     int getData();
-    int getCodigo();
 
 protected:
 private:
@@ -30,6 +29,5 @@ private:
     int cpf;
     int ano;
     int dataNasc;
-    int codigo;
 };
 #endif

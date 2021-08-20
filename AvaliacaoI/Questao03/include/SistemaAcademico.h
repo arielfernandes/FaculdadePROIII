@@ -23,7 +23,7 @@ public:
 
 protected:
 private:
-    vector<DadosUsuario *> dados;
+    //vector<DadosUsuario *> dados;
     vector<Professores *> professores;
     vector<Alunos *> alunos;
 };
